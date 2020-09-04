@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 import com.mc.microservices.paymentservice.entity.Bills;
 
-@FeignClient(name="api-gateway-service")
+@FeignClient(name="api-gateway-server")
 @RibbonClient(name="bills-service")
 public interface BillsProxy {
 	@PutMapping("/bills-service/paid")
