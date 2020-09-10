@@ -16,27 +16,38 @@ Database is connected to AWS RDS mySql database.
 ## APIs
 
 #### Customer API:
- /login (POST)
- /get-all-customer (GET)
- /get-customer/{username} (isaac) (GET)
- /register (POST)
- /update-details (PUT)
+```/login (POST)```
+
+```/get-all-customer (GET)```
+
+```/get-customer/{username} (isaac) (GET)```
+
+```/register (POST)```
+
+```/update-details (PUT)```
 
 #### Bills API:
-/get-bills/{username} (isaac) (GET)
-/add-bills (POST)
-/paid (PUT)
+```/get-bills/{username} (isaac) (GET)```
+
+```/add-bills (POST)```
+
+```/paid (PUT)```
 
 #### Payment API:
-/get-card-details/{username} (GET)
-/paid (POST)
-/add-card-details (POST)
-/remove-card-details/{id} (DELETE)
-Things present in these micro services:
+```/get-card-details/{username} (GET)```
 
-#### API gateway
-#### naming server
-#### spring cloud config serrver
+```/paid (POST)```
+This api will call bills api /paid to update the database.
+
+```/add-card-details (POST)```
+
+```/remove-card-details/{id} (DELETE)```
+
+
+Other things present in these micro services:
+- API gateway
+- naming server
+- spring cloud config serrver
 
 ## Swagger Urls
 | APIs | url|
