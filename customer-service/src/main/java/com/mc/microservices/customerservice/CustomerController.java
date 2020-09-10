@@ -19,6 +19,7 @@ import com.mc.microservices.customerservice.service.CustomerRepository;
 import com.mc.microservices.customerservice.service.CustomerService;
 
 @RestController
+@RequestMapping("/api")
 public class CustomerController {
 	
 	@Autowired

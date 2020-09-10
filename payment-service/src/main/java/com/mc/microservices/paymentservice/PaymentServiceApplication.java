@@ -7,10 +7,12 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 
 import brave.sampler.Sampler;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableFeignClients("com.mc.microservices.paymentservice")
 @EnableDiscoveryClient
+@EnableSwagger2
 public class PaymentServiceApplication {
 
 	public static void main(String[] args) {

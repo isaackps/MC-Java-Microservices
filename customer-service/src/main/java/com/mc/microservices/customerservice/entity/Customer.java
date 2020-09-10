@@ -17,10 +17,9 @@ public class Customer {
     private String password;
     private int contact_number;
     
-    protected Customer() {}
+    public Customer() {}
     
-	public Customer(String name, String email, String username, String password, String address, String country,
-			int postal_code, int contact_number) {
+	public Customer(String name, String email, String username, String password, int contact_number) {
 		super();
 		this.name = name;
 		this.email = email;
