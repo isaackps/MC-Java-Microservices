@@ -16,11 +16,11 @@ Database is connected to AWS RDS mySql database.
 ## APIs
 
 #### Customer API:
-/login (POST)
-/get-all-customer (GET)
-/get-customer/{username} (isaac) (GET)
-/register (POST)
-/update-details (PUT)
+ /login (POST)
+ /get-all-customer (GET)
+ /get-customer/{username} (isaac) (GET)
+ /register (POST)
+ /update-details (PUT)
 
 #### Bills API:
 /get-bills/{username} (isaac) (GET)
