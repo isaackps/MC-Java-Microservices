@@ -10,7 +10,7 @@ import brave.sampler.Sampler;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
-@EnableFeignClients("com.mc.microservices.paymentservice")
+//@EnableFeignClients("com.mc.microservices.paymentservice")
 @EnableDiscoveryClient
 @EnableSwagger2
 public class PaymentServiceApplication {

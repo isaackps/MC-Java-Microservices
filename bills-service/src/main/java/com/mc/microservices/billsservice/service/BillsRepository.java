@@ -1,4 +1,4 @@
-package com.mc.microservices.billsservice.service;
+ package com.mc.microservices.billsservice.service;
 
 import java.util.List;
 
@@ -10,4 +10,8 @@ import com.mc.microservices.billsservice.entity.Bills;
 public interface BillsRepository extends JpaRepository<Bills, Long> {
 
 	public List<Bills> findAllByUsername(@Param("username") String username);
+	
+    public default String hello() {
+        return "Hello World";
+    }
 }

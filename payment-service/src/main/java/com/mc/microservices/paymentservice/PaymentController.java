@@ -20,7 +20,7 @@ import com.mc.microservices.paymentservice.service.PaymentRepository;
 
 @RestController
 @RequestMapping("/api")
-public class paymentController {
+public class PaymentController {
 	
 	@Autowired
 	private BillsProxy billsProxy;

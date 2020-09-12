@@ -17,10 +17,15 @@ import com.mc.microservices.billsservice.service.BillsRepository;
 
 @RestController
 @RequestMapping("/api")
-public class billsController {
+public class BillsController {
 	
 	@Autowired
 	private BillsRepository billsRepository;
+	
+    @GetMapping
+    public String helloWorld() {
+        return billsRepository.hello();
+    }
 	
 	@GetMapping("/get-bills/{username}")
     public List<Bills> retrieveBills(@PathVariable String username) {
@@ -35,7 +40,7 @@ public class billsController {
 	@PutMapping("/paid")
 	public ResponseEntity<Bills> payBills(@RequestBody Bills bill) {
 		bill.setStatus("paid");
-		final Bills updatedBill = billsRepository.save(bill);
+		Bills updatedBill = billsRepository.save(bill);
 		return ResponseEntity.ok(updatedBill);
 	}
 
