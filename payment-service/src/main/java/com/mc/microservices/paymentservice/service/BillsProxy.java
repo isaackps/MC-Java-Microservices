@@ -12,5 +12,5 @@ import com.mc.microservices.paymentservice.entity.Bills;
 @RibbonClient(name="bills-service")
 public interface BillsProxy {
 	@PutMapping("/bills-service/api/paid")
-	public ResponseEntity<Bills> payBills(@RequestBody Bills bill);
+	ResponseEntity<Bills> payBills(@RequestBody Bills bill);
 }
