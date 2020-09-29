@@ -28,6 +28,11 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
+	@GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+    	return ResponseEntity.ok("ok");
+    }
+	
 	@RequestMapping(value="/login", method = RequestMethod.POST)
 	public ResponseEntity<Boolean> login(@RequestParam String username, @RequestParam String password ) {
 		Customer user = customerRepository.findByUsername(username);

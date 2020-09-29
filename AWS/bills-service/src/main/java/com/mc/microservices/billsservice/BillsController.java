@@ -29,6 +29,11 @@ public class BillsController {
     public String helloWorld() {
         return billsRepository.hello();
     }
+    
+    @GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+    	return ResponseEntity.ok("ok");
+    }
 	
 	@GetMapping("/getBills/{username}")
     public List<Bills> retrieveBills(@PathVariable String username) {

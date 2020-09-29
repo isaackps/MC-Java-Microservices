@@ -28,6 +28,11 @@ public class PaymentController {
 	@Autowired
 	private PaymentRepository paymentRepository;
 	
+	@GetMapping("/health")
+    public ResponseEntity<String> healthCheck() {
+    	return ResponseEntity.ok("ok");
+    }
+	
 	@GetMapping("/getCardDetails/{username}")
 	public List<CardDetails> getUserCardDetails(@PathVariable String username) {
 		return paymentRepository.findAllByUsername(username);
